@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Food Stare Layout</title>
+
+    <title>Food Stare Place</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -71,7 +71,7 @@
             </nav>
         </aside>
         <main class="main d-flex flex-column px-spacing-8 py-spacing-8";>
-            <header class="header nabvar flex-nowrap navbar navbar-explan align-items-center spacing-0">
+            <header class="header nabvar flex-nowrap navbar navbar-explan align-items-center spacing-0 pb-spacing-8">
                 <div class="d-flex align-items-center">
                     <button class="btn d-lg-none sidebar-toggle" id="sidebar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="true" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -146,7 +146,94 @@
             </header>
             <div class="content-container">
                 <div class="content">
-                    <!-- contents -->
+                    <div class="card px-4 py-4">
+                        <div class="d-flex align-items-center justify-content-between mb-spacing-7">
+                            <div class="d-flex align-items-center">
+                                <div class="dropdown-button">
+                                    <button class="border btn no-arrow d-flex align-items-center justify-content-between px-3 py-spacing-3_5 rounded-12 font-14 fw-nowmal heading-color bg-light-pink" type="button" id="allPlaceOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+                                        All Places
+                                        <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="14" height="8" fill="none"><path d="M12.25 1.375 7 6.625l-5.25-5.25" stroke="#5A696A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="allPlaceOutside">
+                                      <li><a class="dropdown-item" href="#">Mexico city</a></li>
+                                      <li><a class="dropdown-item" href="#">Cenvera</a></li>
+                                      <li><a class="dropdown-item" href="#">Zakarta</a></li>
+                                    </ul>
+                                </div>
+                                <h3 class="d3-color fw-normal ms-spacing-3">78k Places</h3>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="search px-spacing-3 py-spacing-3_5 rounded-10 d-none d-lg-block">
+                                    <label for="search">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><circle cx="11.766" cy="11.767" r="8.989" stroke="#5A696A" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.018 18.485 21.542 22" stroke="#5A696A" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </label>
+                                    <input id="search" type="text" placeholder="Search" class="border-0 ps-spacing-2">
+                                </div>
+                                <button type="button" class="white-btn font-16 px-3 py-spacing-3_5 rounded-12 ms-3">
+                                    <svg class="me-spacing-2_5" xmlns="http://www.w3.org/2000/svg" width="18" height="21" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m9.153 15.14 2.842-2.87a.75.75 0 0 0-.01-1.06.73.73 0 0 0-1.04 0l-1.574 1.6V7.99a.737.737 0 1 0-1.475 0v4.82l-1.574-1.6a.73.73 0 0 0-1.04 0 .76.76 0 0 0 0 1.06l2.832 2.87a.768.768 0 0 0 .525.22.768.768 0 0 0 .515-.22Zm7.175-7.614c.233-.003.486-.006.717-.006.257 0 .455.2.455.45v8.04c0 2.48-2 4.49-4.455 4.49H5.173C2.59 20.5.5 18.39.5 15.79V5.01C.5 2.53 2.49.5 4.965.5h5.287c.248 0 .456.21.456.46v3.22c0 1.83 1.485 3.33 3.307 3.34.418 0 .793.003 1.12.006.253.002.478.004.672.004.14 0 .324-.002.521-.004Zm.277-1.46c-.813.003-1.773 0-2.463-.007-1.095 0-1.997-.91-1.997-2.017V1.406c0-.43.518-.645.813-.334l2.916 3.062 1.071 1.125a.477.477 0 0 1-.34.807Z" fill="url(#a)"/><defs><linearGradient id="a" x1="9" y1="-16.375" x2="9" y2="36.125" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                    <span>Export</span>
+                                </button>
+                                <button type="button" class="pink-btn font-14 px-3 py-spacing-3_5 rounded-12 ms-3">
+                                    <svg class="me-spacing-1_5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><g clip-path="url(#a)"><path d="M12 8.666H8.668V12c0 .366-.3.666-.666.666A.669.669 0 0 1 7.334 12V8.666H4.001A.669.669 0 0 1 3.334 8c0-.367.3-.667.667-.667h3.333V4c0-.367.3-.667.667-.667.366 0 .666.3.666.667v3.333h3.334c.366 0 .666.3.666.667 0 .366-.3.666-.666.666Z" fill="#FFF"/></g><defs><clipPath id="a"><path fill="#FFF" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+                                    Add New Place
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card rounded-12">
+                            <table class="table table-bordered m-0">
+                                <tr>
+                                    <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Place</th>
+                                    <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Address</th>
+                                    <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Phone</th>
+                                    <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Menu Item</th>
+                                    <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Delivery</th>
+                                    <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Active</th>
+                                    <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Actions</th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="d-flex align-items-center">
+                                            <div class="buy-icon me-2">
+                                                <img src="images/place-buy-1.png" alt="icon" style="width: 16px; height: 16px;">
+                                            </div>
+                                            <img src="images/food-item-image-1.png" alt="image" class="me-2 rounded-circle" style="width: 34px; height: 34px;">
+                                            <span class="font-14 fw-normal heading-color">Tamimi Market </span>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <span class="font-14 fw-normal heading-color">Al Qasim, 11 star colony, Khoba...</span>
+                                    </th>
+                                    <th>
+                                        <span class="font-14 fw-normal heading-color">+966 77778 88890</span>
+
+                                    </th>
+                                    <th>
+                                        <span class="liniar-pink-color fw-normal font-14">21 Item</span>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex align-items-center justify-content-center align-middle">
+                                            <span class="font-14 fw-normal bs-white bs-green rounded-5 px-2">Yes</span>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex align-items-center justify-content-center align-middle">
+                                            <span class="font-14 fw-normal bs-white bs-red rounded-5 px-2">No</span>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div>
+                                            <button type="button" class="bg-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.032 13.02 6.59-8.52c.358-.46.486-.992.366-1.533-.103-.492-.406-.96-.86-1.314L10.023.774C9.06.008 7.866.09 7.182.968l-.741.96a.284.284 0 0 0 .048.394l1.91 1.532c.127.121.223.282.247.476a.709.709 0 0 1-.613.782.635.635 0 0 1-.486-.137L5.581 3.41a.235.235 0 0 0-.318.04L.591 9.498a1.6 1.6 0 0 0-.302 1.346l.597 2.588a.3.3 0 0 0 .294.234l2.627-.032a1.578 1.578 0 0 0 1.225-.613Zm3.678-.805h4.282c.418 0 .758.344.758.768 0 .423-.34.767-.758.767H8.71a.763.763 0 0 1-.758-.768c0-.423.34-.767.758-.767Z" fill="url(#a)"/><defs><linearGradient id="a" x1="7" y1="-11.141" x2="7" y2="24.297" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                            </button>
+                                            <button type="button" class="bg-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.215 2.932c.292 0 .535.242.535.55v.286c0 .3-.243.55-.535.55H.785a.547.547 0 0 1-.535-.55v-.285c0-.309.243-.55.535-.55h2.187c.444 0 .831-.317.93-.762l.115-.512C4.195.963 4.781.5 5.451.5H8.55a1.49 1.49 0 0 1 1.426 1.123l.123.547a.96.96 0 0 0 .93.762h2.187Zm-1.11 10.418c.228-2.127.627-7.182.627-7.233a.56.56 0 0 0-.135-.419.544.544 0 0 0-.393-.175H1.801a.53.53 0 0 0-.392.175.593.593 0 0 0-.143.419l.04.485c.106 1.322.403 5.006.595 6.748.135 1.284.978 2.091 2.198 2.12.942.022 1.912.03 2.904.03.934 0 1.883-.008 2.854-.03 1.263-.021 2.104-.814 2.247-2.12Z" fill="#C1C7C7"/></svg>
+                                            </button>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
