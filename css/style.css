@@ -218,6 +218,9 @@ h5{
 .border-top{
     border-top: 1px solid var(--border-color) !important;
 }
+.border-right{
+    border-right: 1px solid #DDD !important;
+}
 a{
     text-decoration: none;
 }
@@ -283,7 +286,7 @@ background-clip: text;
     border: 1px solid var(--bs-secondary-pink) !important;
     background-color: var(--bs-white) !important;
     transition: all linear 0.3s !important;
-    
+    white-space: nowrap;
 }
 .white-btn span{
     font-weight: 400;
@@ -314,6 +317,7 @@ background-clip: text;
     border: 1px solid var(--bs-secondary-pink) !important;
     background: linear-gradient(180deg, #FF99B8 -84.37%, #F34278 178.12%) !important;
     transition: all linear 0.3s !important;
+    white-space: nowrap;
 }
 .pink-btn:hover{
     background: linear-gradient(180deg, #f1adc2 -84.37%, #af1846 178.12%) !important;
@@ -453,11 +457,29 @@ background-clip: text;
 
 .table>:not(caption)>*>* {
     padding: var(--spacing-4) var(--spacing-3_5);
+    vertical-align: middle;
 }
-
-
-
-
+table th{
+    white-space: nowrap;
+}
+table td {
+    height: 52px;
+    min-width: 100px;
+    max-width: 300px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.scrollable-area{
+    overflow: auto;
+}
+.scrollable-area table {
+    min-width: 1000px;
+}
+/* .scrollable-area table tbody{
+    height: 300px!important;
+} */
 
 
 /*=============================== responcive device ===============================*/
