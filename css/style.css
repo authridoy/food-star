@@ -12,7 +12,6 @@
     --bs-yellow: #ffc107;
     --bs-teal: #20c997;
     --bs-cyan: #0dcaf0;
-    --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
     --bs-primary: #0d6efd;
     --bs-success: #198754;
@@ -83,6 +82,11 @@
     /* size */
     --sidebar-width: 256px;
 
+    /* Scrollbar */
+    --scroll-thumb-bg: rgba(204, 204, 204, 0.80);
+    --scroll-thumn-size: 6px;
+    --scrollnbar-radius: 40px;
+    --bs-gray: #6c757d;
 
 }
 
@@ -126,6 +130,9 @@ h5{
 .spacing-0{
     padding: var(--spacing-0) !important;
 }
+.pb-spacing-1{
+    padding-bottom: var(--spacing-1);
+}
 .ps-spacing-2{
     padding-left: var(--spacing-2) !important;
 }
@@ -154,6 +161,10 @@ h5{
     padding-left: var(--spacing-4) !important;
     padding-right: var(--spacing-4) !important;
 }
+.py-spacing-5{
+    padding-top: var(--spacing-5);
+    padding-bottom: var(--spacing-5);
+}
 .pt-spacing-5{
     padding-top: var(--spacing-5) !important;
 }
@@ -178,6 +189,10 @@ h5{
 .py-spacing-9{
     padding-top: var(--spacing-9) !important;
     padding-bottom: var(--spacing-9) !important;
+}
+.px-spacing-10{
+    padding-left: var(--spacing-10);
+    padding-right: var(--spacing-10);
 }
 
 /* margin */
@@ -229,7 +244,7 @@ a{
 }
 .opacity-0-4{
     opacity: 0.4 !important;
-}
+}--bs-light-dark
 .white-space-nowrap{
    white-space: nowrap; 
 }
@@ -276,6 +291,22 @@ background-clip: text;
 }
 .bs-red{
     background-color: var(--bs-red);
+}
+
+/* scrolbar style */
+::-webkit-scrollbar {
+    width: var(--scroll-thumn-size);
+    height: var(--scroll-thumn-size);
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb-bg);
+    border-radius: var(--scrollnbar-radius);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-gray);
 }
 
 
@@ -446,7 +477,9 @@ background-clip: text;
 
 .content{
     max-height: calc(100vh - 140px);
+    min-width: 350px;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 0 !important;
     padding-left: calc(var(--bs-gutter-x) * .5);
     padding-right: calc(var(--bs-gutter-x) * .5);
@@ -455,6 +488,53 @@ background-clip: text;
 
 /* ====================== food star place ====================== */
 
+
+
+.scrollable-area{
+    overflow: auto;
+}
+.scrollable-area table{
+    min-width: 1000px;
+}
+.table{
+    --bs-table-color-state: var(--heading-text);
+    --bs-table-hover-color: var(--heading-text);
+    margin-bottom: 0;
+}
+
+.table>:not(caption)>*>* {
+    padding: var(--spacing-4) var(--spacing-3_5);
+    vertical-align: middle;
+}
+
+table th{
+    white-space: nowrap;
+}
+table td {
+    min-width: 100px;
+    max-width: 300px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* .scrollable tbody{
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.scrollable thead, 
+.scrollable tbody tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+} */
+
+
+
+
+/* 
 .table>:not(caption)>*>* {
     padding: var(--spacing-4) var(--spacing-3_5);
     vertical-align: middle;
@@ -477,10 +557,97 @@ table td {
 .scrollable-area table {
     min-width: 1000px;
 }
-/* .scrollable-area table tbody{
-    height: 300px!important;
+.scrollable-area table tbody{
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
 } */
 
+
+
+/* .table-area{
+    max-width: 100%;
+    overflow: auto;
+} */
+
+
+/* .table a{
+    color: currentColor;
+} */
+/* .table-light{
+    --bs-table-bg: var(--bs-light-2);
+}
+.table>thead{
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 2;
+} */
+
+
+
+/* .table tr:last-child td,
+table tr:last-child td{
+    border-bottom: none !important;
+} */
+
+/* table.selectable{
+    table-layout: fixed;
+}
+table.selectable th,
+table.selectable td{
+    width: 52px;
+}
+table.selectable th + th,
+table.selectable td + td {
+    width: auto;
+} */
+/* 
+th .check-wrap,
+td .check-wrap{
+    margin: 0 auto;
+}
+th .check-box,
+td .check-box{
+    border-color: #BEBEBE;
+}
+
+th input:checked  + .check-box,
+td input:checked  +  .check-box{
+    border-color: var(--blue-secondary);
+}
+
+th .check-box::after{
+    content: "";
+    width: 10px;
+    height: 1px;
+    background-color: #BEBEBE;
+    display: inline-block;
+}
+th input:checked  + .check-box::after{
+    background-color: transparent;
+}
+
+table tr th{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-weight-semibold);
+    --bs-table-color-state: var(--body-text);
+    text-transform: uppercase;
+    text-wrap: nowrap;
+}
+table tr td{
+ color: var(--heading-text);
+ font-size: var( --bs-body-font-size);
+ font-weight: var(--font-weight-medium);
+ border-color: var(--border-color);
+}
+.table-hover>tbody>tr:hover>* {
+    --bs-table-color-state: var(--bs-table-hover-color);
+    --bs-table-bg-state: var(--bs-light);
+}
+.status-col{
+    width: 140px;
+} */
 
 /*=============================== responcive device ===============================*/
 
