@@ -234,8 +234,11 @@ h5{
 .ms-spacing-3_5{
     margin-left: var(--spacing-3_5) !important;
 }
+.mt-spacing-4_5{
+    margin-top: var(--spacing-4_5) !important;
+}
 .mb-spacing-7{
-    margin-bottom: var(--spacing-7);
+    margin-bottom: var(--spacing-7) !important;
 }
 .mb-spacing-8{
     margin-bottom: var(--spacing-8) !important;
@@ -350,9 +353,6 @@ background-clip: text;
     background: var(--bs-gray);
 }
 
-
-
-
 /* white btn */
 .white-btn{
     border: 1px solid var(--bs-secondary-pink) !important;
@@ -380,7 +380,6 @@ background-clip: text;
 .white-btn:hover svg path{
     fill: var(--bs-white) !important;
 }
-
 
 /* pink button */
 
@@ -583,6 +582,20 @@ table td {
     width: 100%;
     table-layout: fixed;
 } */
+
+/*===== input switch =====*/
+.form-check-input:checked {
+    background-color:  Green;
+    outline: none;
+}
+.form-check-input:focus{
+    box-shadow: none;
+    /* background: #E0E3E3; */
+    border-color: #E0E3E3;
+}
+.form-check-input:checked:focus{
+    box-shadow: none;
+}
 
 
 
