@@ -66,6 +66,7 @@
     --spacing-10: 2.5rem; /* 40px */
     --spacing-10_5: 2.625rem; /* 42px */
     --spacing-13: 3.25rem; /* 52px */
+    --spacing-14: 3.5rem; /* 56px */
 
     /* font size */
     --font-size-h1: 2rem; /* 32px */
@@ -246,6 +247,9 @@ h5{
 .ml-spacing-10_5{
     margin-left: var(--spacing-10_5) !important;
 }
+.mt-spacing-14{
+    margin-top: var(--spacing-14) !important;
+}
 
 
 /* raidus */
@@ -285,6 +289,9 @@ a{
 }
 .opacity-0-7{
     opacity: 0.7 !important;
+}
+.opacity-0-6{
+    opacity: 0.6 !important;
 }
 .opacity-0-4{
     opacity: 0.4 !important;
@@ -335,6 +342,9 @@ background-clip: text;
 }
 .bs-red{
     background-color: var(--bs-red);
+}
+.input-bg{
+    background: #FAFAFA !important;
 }
 
 /* scrolbar style */
