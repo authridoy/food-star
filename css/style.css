@@ -497,10 +497,15 @@ input{
     color: rgba(90, 105, 106, 0.50) !important;
     font-size: var(--font-size-medium)!important;
 }
-input::placeholder{
+input::placeholder,
+textarea::placeholder{
     color: rgba(90, 105, 106, 0.50) !important;
 }
 .input-group>.form-control:focus{
+    box-shadow: none;
+    border-color: var(--bs-green) !important;
+}
+textarea#menu-item-Description:focus{
     box-shadow: none;
     border-color: var(--bs-green) !important;
 }
@@ -619,10 +624,10 @@ table td {
 
 /*========== menu ==========*/
 
-.menu-item-scrollable{
+/* .menu-item-scrollable{
     height: 672px;
     overflow-y: auto;
-}
+} */
 
 
 
