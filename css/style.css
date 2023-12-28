@@ -32,6 +32,7 @@
     --bs-red-pink: #F66893;;
     --gray-white-color: #B9BFC0;
     --d3-color: #C1C7C7;
+    --d1-color: #314345;
     --bs-white: #FFF;
     --border-color: #E0E3E3;
     --bg-light-pink:#FFF5F8;
@@ -209,6 +210,9 @@ h5{
 .pb-spacing-8{
     padding-bottom: var(--spacing-8) !important;
 }
+.pe-spacing-8{
+    padding-right: var(--spacing-8) !important;
+}
 .py-spacing-9{
     padding-top: var(--spacing-9) !important;
     padding-bottom: var(--spacing-9) !important;
@@ -278,9 +282,6 @@ h5{
 .border-top{
     border-top: 1px solid var(--border-color) !important;
 }
-.border-right{
-    border-right: 1px solid #DDD !important;
-}
 a{
     text-decoration: none;
 }
@@ -292,6 +293,9 @@ a{
 }
 .opacity-0-6{
     opacity: 0.6 !important;
+}
+.opacity-0-5{
+    opacity: 0.5 !important;
 }
 .opacity-0-4{
     opacity: 0.4 !important;
@@ -325,11 +329,17 @@ a{
 .d3-color{
     color: var(--d3-color) !important;
 }
+.d1-color{
+    color: var(--d1-color) !important;
+}
+.border-right{
+    border-right: 1px solid #DDD !important;
+}
 .liniar-pink-color{
     background: var(--Chill-red, linear-gradient(180deg, #FF99B8 -84.37%, #F34278 178.12%));
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .bg-liniar-pink-color{
     background:  linear-gradient(180deg, #FF99B8 -84.37%, #F34278 178.12%) !important;
@@ -606,6 +616,15 @@ table td {
 .form-check-input:checked:focus{
     box-shadow: none;
 }
+
+/*========== menu ==========*/
+
+.menu-item-scrollable{
+    height: 672px;
+    overflow-y: auto;
+}
+
+
 
 
 
