@@ -663,8 +663,11 @@ table td {
         margin-top: var(--spacing-6) !important;
     }
     .px-md-spacing-5{
-        padding-left: var(--spacing-5)!important;
-        padding-right: var(--spacing-5)!important;
+        padding-left: var(--spacing-5) !important;
+        padding-right: var(--spacing-5) !important;
+    }
+    .md-mt-4{
+        margin-top: var(--spacing-6) !important;
     }
     
 }
@@ -672,7 +675,7 @@ table td {
 /* small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
     .search-dropdown button{
-        padding: 4px!important;
+        padding: 4px !important;
     }
     .admin-profile-dropdown button img{
         width: 30px;
@@ -715,4 +718,17 @@ table td {
         top: 32px;
     }
     
+}
+
+/* xl-small devices (portrait phones, less than 444px)  */
+@media (max-width: 444px){
+    .w-sm-100{
+        width: 100% !important;
+    }
+    .sm-m-0{
+        margin: var(--spacing-0) !important;
+    }
+    .mt-sm-3{
+        margin-top: var(--spacing-3) !important;
+    }
 }
