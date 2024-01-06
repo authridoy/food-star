@@ -76,7 +76,7 @@
                     <button class="btn d-lg-none sidebar-toggle" id="sidebar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="true" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <h3 class="heading-color fw-semibold d-none d-sm-block">User Management</h3>
+                    <h3 class="heading-color fw-semibold d-none d-sm-block">Create User</h3>
                 </div>
                 <div class="d-flex align-items-center ms-auto">
 
@@ -146,7 +146,85 @@
             </header>
             <div class="content-container">
                 <div class="content">
-                    <!-- contents -->
+                   
+                    <div class="card px-spacing-13 px-md-spacing-5 py-spacing-8">
+                        <h4 class="bs-light-dark fw-normal">User Details</h4>
+                        <div class="mt-4 d-flex align-items-center px-spacing-3 py-spacing-3 rounded-20" style="border: 1px dashed var(--border-color); max-width: 480px;">
+                            <img src="images/update-image.png" alt="image" style="width: 108px; height: 108px;">
+                            <div class="text-center ml-spacing-10_5">
+                                <span class="bs-light-dar font-12 fw-normal">Restaurant Image</span>
+                                <p class="mt-2 heading-color fw-normal font-12">Drop your file here to upload (Only JPEG or PNG)</p>
+                                <button type="button" class="white-btn font-14 px-spacing-4_5 py-2 rounded-14 mt-3">
+                                    <span>Browse Image</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="input-item mb-4">
+                                            <label for="usermanagementName" class="form-label heading-color font-16 fw-normal">Name</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="usermanagementName" placeholder="Enter Restaurant Name">
+                                            </div>
+                                        </div>
+    
+                                        <div class="input-item mb-4">
+                                            <label for="usermanagementEmail" class="form-label heading-color font-16 fw-normal">Email</label>
+                                            <div class="input-group">
+                                                <input type="email" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="usermanagementEmail" placeholder="Enter Email">
+                                            </div>
+                                        </div>
+    
+                                        <div class="input-item mb-4">
+                                            <label for="createuserpassword" class="form-label heading-color font-16 fw-normal">Password</label>
+                                            <div class="input-group">
+                                                <input type="password" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="createuserpassword" placeholder="Enter Password">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="input-item mb-4">
+                                            <label for="createuser-item-Description" class="form-label heading-color font-16 fw-normal">Short Biography</label>
+                                            <textarea id="createuser-item-Description" placeholder="Write the description here..." class="form-control input-bg font-14 fw-normal rounded-16" style="max-height: 150px; min-height: 150px;"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="input-item mb-4">
+                                            <label for="createusermanagementPhone" class="form-label heading-color font-16 fw-normal">Phone</label>
+                                            <div class="input-group">
+                                                <input type="tel" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="createusermanagementPhone" placeholder="Enter Phone Number">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-item mb-4">
+                                            <label for="createusermanagementAddress" class="form-label heading-color font-16 fw-normal">Address</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="createusermanagementAddress" placeholder="Enter Address">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-item mb-4">
+                                            <label for="createuserconfirmpassword" class="form-label heading-color font-16 fw-normal">Confirm Password</label>
+                                            <div class="input-group">
+                                                <input type="password" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="createuserconfirmpassword" placeholder="Enter Password Again">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-item mb-4">
+                                            <label for="createusermanagementRole" class="form-label heading-color font-16 fw-normal">Role</label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="createusermanagementRole" placeholder="Enter role">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </main>
