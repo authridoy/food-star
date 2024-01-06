@@ -630,6 +630,18 @@ table td {
 } */
 
 
+/* managment area */
+
+.red{
+    width: 8px;
+    height: 8px;
+    background-color: var(--bs-red-pink);
+}
+.green{
+    width: 8px;
+    height: 8px;
+    background-color: var(--green-secondary);
+}
 
 
 
