@@ -12,7 +12,6 @@
 </head>
 <body>
     
-
     <div class="d-flex">
         <aside id="sidebar" class="sidebar collapse d-lg-block">
             <div class="main-logo py-spacing-9 px-spacing-6"> 
@@ -76,7 +75,7 @@
                     <button class="btn d-lg-none sidebar-toggle" id="sidebar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="true" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <h3 class="heading-color fw-semibold d-none d-sm-block">Create User</h3>
+                    <h3 class="heading-color fw-semibold d-none d-sm-block">Add New User</h3>
                 </div>
                 <div class="d-flex align-items-center ms-auto">
 
@@ -164,62 +163,73 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="input-item mb-4">
-                                            <label for="usermanagementName" class="form-label heading-color font-16 fw-normal">Name</label>
+                                            <label for="newuserName" class="form-label heading-color font-16 fw-normal">Name</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="usermanagementName" placeholder="Enter Restaurant Name">
+                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuserName" placeholder="Enter Restaurant Name">
                                             </div>
                                         </div>
     
                                         <div class="input-item mb-4">
-                                            <label for="usermanagementEmail" class="form-label heading-color font-16 fw-normal">Email</label>
+                                            <label for="newuserEmail" class="form-label heading-color font-16 fw-normal">Email</label>
                                             <div class="input-group">
-                                                <input type="email" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="usermanagementEmail" placeholder="Enter Email">
+                                                <input type="email" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuserEmail" placeholder="Enter Email">
                                             </div>
                                         </div>
     
                                         <div class="input-item mb-4">
-                                            <label for="createuserpassword" class="form-label heading-color font-16 fw-normal">Password</label>
+                                            <label for="newuserpassword" class="form-label heading-color font-16 fw-normal">Password</label>
                                             <div class="input-group">
-                                                <input type="password" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="createuserpassword" placeholder="Enter Password">
+                                                <input type="password" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuserpassword" placeholder="Enter Password">
                                             </div>
                                         </div>
-                                        
+
                                         <div class="input-item mb-4">
-                                            <label for="createuser-item-Description" class="form-label heading-color font-16 fw-normal">Short Biography</label>
-                                            <textarea id="createuser-item-Description" placeholder="Write the description here..." class="form-control input-bg font-14 fw-normal rounded-16" style="max-height: 150px; min-height: 150px;"></textarea>
+                                            <label for="newuserwallet" class="form-label heading-color font-16 fw-normal">Wallet Cash</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuserwallet" placeholder="Enter Cash Amount">
+                                            </div>
                                         </div>
+                                    
                                     </div>
 
                                     <div class="col-lg-6">
                                         <div class="input-item mb-4">
-                                            <label for="createusermanagementPhone" class="form-label heading-color font-16 fw-normal">Phone</label>
+                                            <label for="newuser2Phone" class="form-label heading-color font-16 fw-normal">Phone</label>
                                             <div class="input-group">
-                                                <input type="tel" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="createusermanagementPhone" placeholder="Enter Phone Number">
+                                                <input type="tel" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuser2Phone" placeholder="Enter Phone Number">
                                             </div>
                                         </div>
 
                                         <div class="input-item mb-4">
-                                            <label for="createusermanagementAddress" class="form-label heading-color font-16 fw-normal">Address</label>
+                                            <label for="newuser2Address" class="form-label heading-color font-16 fw-normal">Address</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="createusermanagementAddress" placeholder="Enter Address">
+                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuser2Address" placeholder="Enter Address">
                                             </div>
                                         </div>
 
                                         <div class="input-item mb-4">
-                                            <label for="createuserconfirmpassword" class="form-label heading-color font-16 fw-normal">Confirm Password</label>
+                                            <label for="newuser2password" class="form-label heading-color font-16 fw-normal">Confirm Password</label>
                                             <div class="input-group">
-                                                <input type="password" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="createuserconfirmpassword" placeholder="Enter Password Again">
+                                                <input type="password" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuser2password" placeholder="Enter Password Again">
                                             </div>
                                         </div>
 
                                         <div class="input-item mb-4">
-                                            <label for="createusermanagementRole" class="form-label heading-color font-16 fw-normal">Role</label>
+                                            <label for="newuser2userstatus" class="form-label heading-color font-16 fw-normal">Status</label>
                                             <div class="input-group">
-                                                <input type="number" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="createusermanagementRole" placeholder="Enter role">
+                                                <input type="number" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuser2userstatus" placeholder="Active">
                                             </div>
                                         </div>
 
                                     </div>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <button type="button" class="white-btn font-18 py-spacing-3_5 rounded-12 w-sm-100 mt-sm-3" style="width: 156px;">
+                                        <span>Discard</span>
+                                    </button>
+                                    <button type="button" class="pink-btn  ms-3 font-18 py-spacing-3_5 rounded-12 w-sm-100 sm-m-0 mt-sm-3" style="width: 156px;">
+                                        Save
+                                    </button>
                                 </div>
                             </form>
                         </div>
