@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Order</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+
+    <div class="d-flex">
+        <aside id="sidebar" class="sidebar collapse d-lg-block">
+            <div class="main-logo py-spacing-9 px-spacing-6"> 
+                <a href="index.html" class="d-flex align-items-center">
+                    <img src="images/main-logo.png" alt="Octopus logo" class="rounded-circle me-2" style="width: 32px; height: 32px;">
+                    <h3 class="bs-secondary-gray fst-italic fw-semibold">Foodstar</h3>
+                </a>
+            </div>
+            <nav class="sidebar-nav mb-spacing-8">
+                <ul>
+                    <li>
+                        <a class="d-flex align-items-center px-4 py-2" href="#dashboard">
+                            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.271.342a.687.687 0 0 1 .49-.174c3.809.114 6.992 2.879 7.569 6.575a.201.201 0 0 1 0 .066.65.65 0 0 1-.164.48.676.676 0 0 1-.462.224l-6.4.422a.764.764 0 0 1-.578-.192.734.734 0 0 1-.245-.549L9.051.908V.804a.661.661 0 0 1 .22-.462Zm-.439 9.236 5.547-.355.038.015c.238.004.465.1.63.268a.872.872 0 0 1 .253.628c-.219 3.185-2.554 5.846-5.732 6.532-3.178.685-6.435-.77-7.995-3.57a6.846 6.846 0 0 1-.853-2.614 4.963 4.963 0 0 1-.053-.822c.01-3.387 2.422-6.31 5.796-7.027a.918.918 0 0 1 .996.496c.044.067.08.14.106.215.063.976.128 1.943.194 2.906l.153 2.277c-.003.178.025.356.083.526a.854.854 0 0 0 .837.525Z" fill="#B9BFC0"/></svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex align-items-center px-4 py-2" href="#places">
+                            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.109 4.334a.418.418 0 0 0 .036-.188h.022A4.16 4.16 0 0 0 8.004.167a4.16 4.16 0 0 0-4.162 3.979.541.541 0 0 0 0 .188h-.066c-1.067 0-2.209.705-2.54 2.6l-.649 5.162c-.53 3.79 1.422 4.738 3.97 4.738h6.908c2.541 0 4.434-1.372 3.963-4.738l-.641-5.162c-.39-1.842-1.495-2.6-2.548-2.6h-.13Zm-1.198 0a.54.54 0 0 1-.036-.188c0-1.598-1.3-2.894-2.904-2.894a2.898 2.898 0 0 0-2.903 2.894.54.54 0 0 1 0 .188h5.843Zm-5.33 4.29a.748.748 0 0 1-.737-.758c0-.419.33-.758.737-.758s.736.34.736.758c0 .419-.33.758-.736.758Zm4.087-.758c0 .419.33.758.737.758s.736-.34.736-.758a.747.747 0 0 0-.736-.758.748.748 0 0 0-.737.758Z" fill="#B9BFC0"/></svg>
+                            Places
+                        </a>
+                    </li>        
+                    <li>
+                        <a class="d-flex align-items-center px-4 py-2" href="#menu">
+                            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.926 14.39h5.386c.406 0 .743-.34.743-.75s-.337-.74-.743-.74H5.926a.743.743 0 0 0-.743.74c0 .41.337.75.743.75ZM9.272 7.9H5.926a.752.752 0 0 0-.743.75c0 .41.337.74.743.74h3.346c.406 0 .743-.33.743-.74s-.337-.75-.743-.75Zm7.066-.874c.233-.003.486-.006.716-.006.248 0 .446.2.446.45v8.04c0 2.48-1.99 4.49-4.445 4.49H5.173C2.6 20 .5 17.89.5 15.29V4.51C.5 2.03 2.5 0 4.965 0h5.287c.258 0 .456.21.456.46v3.22c0 1.83 1.495 3.33 3.307 3.34.423 0 .796.003 1.123.006.254.002.48.004.679.004.14 0 .323-.002.521-.004Zm.273-1.46c-.814.003-1.773 0-2.463-.007-1.095 0-1.997-.911-1.997-2.017V.906c0-.431.518-.645.814-.334l2.005 2.106 1.98 2.081a.477.477 0 0 1-.339.807Z" fill="#B9BFC0"/></svg>
+                            Menu
+                        </a>
+                    </li>        
+                    <li>
+                        <a class="d-flex align-items-center px-4 py-2" href="#role-management">
+                            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.704 1.519c-.67 0-1.24.466-1.4 1.094h5.382a1.453 1.453 0 0 0-1.4-1.094H8.704Zm5.503 1.094h1.981C18.29 2.613 20 4.344 20 6.47c0 0-.06.9-.08 2.154a.33.33 0 0 1-.13.255c-.48.355-.92.65-.96.67-1.661 1.113-3.591 1.897-5.647 2.287a.318.318 0 0 1-.335-.163 3.296 3.296 0 0 0-2.853-1.649 3.35 3.35 0 0 0-2.872 1.643.319.319 0 0 1-.333.16 15.491 15.491 0 0 1-5.62-2.269l-.96-.668a.286.286 0 0 1-.13-.243C.05 8.132 0 6.471 0 6.471c0-2.127 1.71-3.858 3.812-3.858h1.97C5.974 1.144 7.205 0 8.705 0h2.582c1.5 0 2.731 1.144 2.921 2.613Zm5.453 8.202-.04.02c-2.021 1.357-4.452 2.259-7.004 2.633a.753.753 0 0 1-.82-.546 1.816 1.816 0 0 0-1.781-1.378h-.03c-.85 0-1.56.547-1.78 1.378a.753.753 0 0 1-.821.546C4.832 13.094 2.4 12.192.38 10.835c-.01-.01-.11-.07-.19-.02-.09.05-.09.172-.09.172l.07 5.165C.17 18.279 1.87 20 3.972 20h12.046c2.101 0 3.802-1.721 3.802-3.848l.08-5.165s0-.121-.09-.172c-.05-.03-.11-.02-.15 0Zm-8.915 4.243c0 .426-.33.76-.75.76a.754.754 0 0 1-.75-.76v-1.306c0-.415.34-.76.75-.76.42 0 .75.345.75.76v1.306Z" fill="#B9BFC0"/></svg>
+                            Role Management
+                        </a>
+                    </li>        
+                    <li>
+                        <a class="d-flex align-items-center px-4 py-2" href="#user-management">
+                            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.294 5.291A5.274 5.274 0 0 1 8 10.583a5.275 5.275 0 0 1-5.294-5.292A5.274 5.274 0 0 1 8 0a5.273 5.273 0 0 1 5.294 5.291ZM8 20c-4.338 0-8-.705-8-3.425 0-2.721 3.685-3.401 8-3.401 4.339 0 8 .705 8 3.425C16 19.32 12.315 20 8 20Z" fill="#B9BFC0"/></svg>
+                            User Management
+                        </a>
+                    </li>        
+                    <li>
+                        <a class="d-flex align-items-center px-4 py-2" href="order.html">
+                            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M19.4354 0.581983C18.9352 0.0685981 18.1949 -0.122663 17.5046 0.0786645L1.408 4.75952C0.679698 4.96186 0.163487 5.54269 0.0244302 6.28055C-0.117628 7.0315 0.378575 7.98479 1.02684 8.38342L6.0599 11.4768C6.57611 11.7939 7.24238 11.7144 7.66956 11.2835L13.4329 5.4843C13.723 5.18231 14.2032 5.18231 14.4934 5.4843C14.7835 5.77623 14.7835 6.24935 14.4934 6.55134L8.71999 12.3516C8.29181 12.7814 8.21178 13.4508 8.52691 13.9702L11.6022 19.0538C11.9623 19.6577 12.5826 20 13.2628 20C13.3429 20 13.4329 20 13.513 19.9899C14.2933 19.8893 14.9135 19.3558 15.1436 18.6008L19.9156 2.52479C20.1257 1.84028 19.9356 1.09537 19.4354 0.581983Z" fill="#B9BFC0"/>
+                            </svg>
+                            Orders
+                        </a>
+                    </li>        
+                    <li>
+                        <a class="d-flex align-items-center px-4 py-2" href="#manage-services">
+                            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.402 11.58c.358.19.634.49.828.79.378.62.348 1.38-.02 2.05l-.716 1.2a2.13 2.13 0 0 1-1.808 1.04c-.358 0-.757-.1-1.084-.3-.266-.17-.572-.23-.9-.23-1.01 0-1.86.83-1.89 1.82 0 1.15-.94 2.05-2.115 2.05h-1.39c-1.186 0-2.126-.9-2.126-2.05-.02-.99-.868-1.82-1.88-1.82-.337 0-.644.06-.9.23-.327.2-.735.3-1.083.3-.736 0-1.44-.4-1.819-1.04l-.705-1.2c-.378-.65-.399-1.43-.02-2.05.163-.3.47-.6.817-.79.286-.14.47-.37.644-.64.511-.86.204-1.99-.664-2.5a2.044 2.044 0 0 1-.757-2.83L1.5 4.43a2.124 2.124 0 0 1 2.882-.76c.89.48 2.044.16 2.565-.69.164-.28.256-.58.235-.88-.02-.39.092-.76.286-1.06A2.195 2.195 0 0 1 9.277 0h1.44c.756 0 1.441.42 1.82 1.04.183.3.306.67.275 1.06-.02.3.072.6.235.88.521.85 1.676 1.17 2.576.69a2.112 2.112 0 0 1 2.871.76l.685 1.18c.593.99.266 2.26-.756 2.83-.869.51-1.175 1.64-.654 2.5.163.27.347.5.633.64ZM7.11 10.01c0 1.57 1.298 2.82 2.902 2.82s2.872-1.25 2.872-2.82c0-1.57-1.268-2.83-2.872-2.83-1.604 0-2.902 1.26-2.902 2.83Z" fill="#B9BFC0"/></svg>
+                            Manage Services
+                        </a>
+                    </li>        
+                </ul>
+            </nav>
+        </aside>
+        <main class="main d-flex flex-column px-spacing-8 py-spacing-8";>
+            <header class="header nabvar flex-nowrap navbar navbar-explan align-items-center spacing-0 mb-spacing-8">
+                <div class="d-flex align-items-center">
+                    <button class="btn d-lg-none sidebar-toggle" id="sidebar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="true" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <h3 class="heading-color fw-semibold d-none d-sm-block">Orders</h3>
+                </div>
+                <div class="d-flex align-items-center ms-auto">
+
+                    <div class="search px-spacing-3 py-2 rounded-10 d-none d-lg-block">
+                        <label for="search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><circle cx="11.766" cy="11.767" r="8.989" stroke="#5A696A" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.018 18.485 21.542 22" stroke="#5A696A" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </label>
+                        <input id="search" type="text" placeholder="Search" class="border-0 ps-spacing-2">
+                    </div>
+                    <div class="dropdown d-lg-none search-dropdown">
+                        <button class="btn btn-transparent p-2 border no-arrow dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11.766" cy="11.767" r="8.989" stroke="#5A696A" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.018 18.485 21.542 22" stroke="#5A696A" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="dropdown-menu search px-spacing-3 py-2 rounded-10 mt-md-spacing-4">
+                            <input id="search" type="text" placeholder="Search" class="border-0 ps-spacing-2 w-100">
+                        </div>
+                    </div>
+
+                    <div class="dropdown notification-dropdown ms-4 ml-md-auto d-none d-lg-block">
+                        <button type="button" class="notification-btn bg-transparent text-center rounded-10 ms-2 bg-transparent border-0 rounded-10"  class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.707 6.796c0 1.256.332 1.997 1.063 2.85.553.628.73 1.435.73 2.31 0 .874-.287 1.704-.863 2.378a4.537 4.537 0 0 1-2.9 1.413c-1.571.134-3.143.247-4.736.247-1.595 0-3.166-.068-4.737-.247a4.532 4.532 0 0 1-2.9-1.413A3.616 3.616 0 0 1 .5 11.956c0-.875.178-1.682.73-2.31.754-.853 1.064-1.594 1.064-2.85V6.37c0-1.682.42-2.781 1.283-3.858C4.861.942 6.919 0 8.956 0h.09c2.08 0 4.204.987 5.466 2.625.82 1.054 1.195 2.108 1.195 3.745v.426ZM6.074 18.061c0-.504.462-.734.89-.833.5-.106 3.545-.106 4.045 0 .428.099.89.33.89.833-.025.48-.306.904-.695 1.174a3.635 3.635 0 0 1-1.713.731 3.795 3.795 0 0 1-1.008 0 3.618 3.618 0 0 1-1.714-.732c-.39-.269-.67-.694-.695-1.173Z" fill="#5A696A" fill-opacity=".4"/></svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">notification-1</a></li>
+                          <li><a class="dropdown-item" href="#">notification-2</a></li>
+                          <li><a class="dropdown-item" href="#">notification-3</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown d-lg-none notification-dropdown">
+                        
+                        <button type="button" class="notification-btn bg-transparent text-center rounded-10 ms-2 bg-transparent border-0 rounded-10"  class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.707 6.796c0 1.256.332 1.997 1.063 2.85.553.628.73 1.435.73 2.31 0 .874-.287 1.704-.863 2.378a4.537 4.537 0 0 1-2.9 1.413c-1.571.134-3.143.247-4.736.247-1.595 0-3.166-.068-4.737-.247a4.532 4.532 0 0 1-2.9-1.413A3.616 3.616 0 0 1 .5 11.956c0-.875.178-1.682.73-2.31.754-.853 1.064-1.594 1.064-2.85V6.37c0-1.682.42-2.781 1.283-3.858C4.861.942 6.919 0 8.956 0h.09c2.08 0 4.204.987 5.466 2.625.82 1.054 1.195 2.108 1.195 3.745v.426ZM6.074 18.061c0-.504.462-.734.89-.833.5-.106 3.545-.106 4.045 0 .428.099.89.33.89.833-.025.48-.306.904-.695 1.174a3.635 3.635 0 0 1-1.713.731 3.795 3.795 0 0 1-1.008 0 3.618 3.618 0 0 1-1.714-.732c-.39-.269-.67-.694-.695-1.173Z" fill="#5A696A" fill-opacity=".4"/></svg>
+                        </button>
+                      
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">notification-1</a></li>
+                          <li><a class="dropdown-item" href="#">notification-2</a></li>
+                          <li><a class="dropdown-item" href="#">notification-3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown admin-profile-dropdown ms-4 ms-md-spacing-4 d-none d-lg-block">
+                        <span class="heading-color fw-nowmal font-16 d-none d-md-inline-block">Super Admin</span>
+                        <button type="button" class="ms-2 bg-transparent border-0 rounded-10"  class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="images/profile.png" alt="">
+                        </button>
+                      
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Super Admin-1</a></li>
+                          <li><a class="dropdown-item" href="#">Super Admin-2</a></li>
+                          <li><a class="dropdown-item" href="#">Super Admin-3</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown d-lg-none admin-profile-dropdown">
+                        <button type="button" class="ms-2 bg-transparent border-0 rounded-10"  class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="images/profile.png" alt="">
+                        </button>
+                      
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Super Admin-1</a></li>
+                          <li><a class="dropdown-item" href="#">Super Admin-2</a></li>
+                          <li><a class="dropdown-item" href="#">Super Admin-3</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </header>
+            <div class="content-container">
+                <div class="content">
+                    <div class="card px-4 py-4">
+                        <div class="d-flex md-d-block align-items-center justify-content-between mb-spacing-7">
+                            <div class="d-flex align-items-center">
+                                <div class="dropdown-button">
+                                    <button class="border btn no-arrow d-flex align-items-center justify-content-between px-3 py-spacing-3_5 rounded-12 font-14 fw-nowmal heading-color bg-light-pink white-space-nowrap" type="button" id="allPlaceOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+                                        Recent Orders
+                                        <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="14" height="8" fill="none"><path d="M12.25 1.375 7 6.625l-5.25-5.25" stroke="#5A696A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="allPlaceOutside">
+                                      <li><a class="dropdown-item" href="#">Mexico city</a></li>
+                                      <li><a class="dropdown-item" href="#">Cenvera</a></li>
+                                      <li><a class="dropdown-item" href="#">Zakarta</a></li>
+                                    </ul>
+                                </div>
+                                <h3 class="d3-color fw-normal ms-spacing-3 white-space-nowrap">174k Places</h3>
+                            </div>
+                            <div class="d-flex align-items-center md-mt-3">
+                                <div class="search px-spacing-3 py-spacing-3_5 rounded-10">
+                                    <label for="place-search">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><circle cx="11.766" cy="11.767" r="8.989" stroke="#5A696A" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.018 18.485 21.542 22" stroke="#5A696A" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </label>
+                                    <input id="place-search" type="text" placeholder="Search" class="border-0 ps-spacing-2">
+                                </div>
+                                <button type="button" class="white-btn font-16 px-3 py-spacing-3_5 rounded-12 ms-3">
+                                    <svg class="me-spacing-2_5" xmlns="http://www.w3.org/2000/svg" width="18" height="21" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m9.153 15.14 2.842-2.87a.75.75 0 0 0-.01-1.06.73.73 0 0 0-1.04 0l-1.574 1.6V7.99a.737.737 0 1 0-1.475 0v4.82l-1.574-1.6a.73.73 0 0 0-1.04 0 .76.76 0 0 0 0 1.06l2.832 2.87a.768.768 0 0 0 .525.22.768.768 0 0 0 .515-.22Zm7.175-7.614c.233-.003.486-.006.717-.006.257 0 .455.2.455.45v8.04c0 2.48-2 4.49-4.455 4.49H5.173C2.59 20.5.5 18.39.5 15.79V5.01C.5 2.53 2.49.5 4.965.5h5.287c.248 0 .456.21.456.46v3.22c0 1.83 1.485 3.33 3.307 3.34.418 0 .793.003 1.12.006.253.002.478.004.672.004.14 0 .324-.002.521-.004Zm.277-1.46c-.813.003-1.773 0-2.463-.007-1.095 0-1.997-.91-1.997-2.017V1.406c0-.43.518-.645.813-.334l2.916 3.062 1.071 1.125a.477.477 0 0 1-.34.807Z" fill="url(#a)"/><defs><linearGradient id="a" x1="9" y1="-16.375" x2="9" y2="36.125" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                    <span>Export</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card rounded-12 scrollable-area">
+                            
+                            <table class="table table-bordered m-0 scrollable searchable-table">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Order ID</th>
+                                        <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Client</th>
+                                        <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Order Status</th>
+                                        <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Tax</th>
+                                        <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Delivery Fee</th>
+                                        <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Payment </th>
+                                        <th class="bg-light heading-color fw-normal font-16 px-3 py-3">Pay Method </th>
+                                        <th class="bg-light heading-color fw-normal font-16 px-3 py-3 text-center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">#174020</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Theresa Webb</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color d-flex align-items-center">
+                                                <div class="green rounded-circle me-spacing-1_5"></div>
+                                                Delivered
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">24.5%</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">15.90 SAR</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal green-color">Successful</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Cash On Delivery</span>                
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.032 13.02 6.59-8.52c.358-.46.486-.992.366-1.533-.103-.492-.406-.96-.86-1.314L10.023.774C9.06.008 7.866.09 7.182.968l-.741.96a.284.284 0 0 0 .048.394l1.91 1.532c.127.121.223.282.247.476a.709.709 0 0 1-.613.782.635.635 0 0 1-.486-.137L5.581 3.41a.235.235 0 0 0-.318.04L.591 9.498a1.6 1.6 0 0 0-.302 1.346l.597 2.588a.3.3 0 0 0 .294.234l2.627-.032a1.578 1.578 0 0 0 1.225-.613Zm3.678-.805h4.282c.418 0 .758.344.758.768 0 .423-.34.767-.758.767H8.71a.763.763 0 0 1-.758-.768c0-.423.34-.767.758-.767Z" fill="url(#a)"/><defs><linearGradient id="a" x1="7" y1="-11.141" x2="7" y2="24.297" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.073 6c0 1.6 1.31 2.902 2.927 2.902 1.61 0 2.92-1.302 2.92-2.902 0-1.607-1.31-2.91-2.92-2.91A2.917 2.917 0 0 0 5.073 6Zm7.23-4.465c1.28.989 2.37 2.436 3.153 4.247a.546.546 0 0 1 0 .429C13.89 9.833 11.102 12 8 12h-.007C4.898 12 2.11 9.833.543 6.21a.546.546 0 0 1 0-.428C2.11 2.16 4.899 0 7.994 0H8c1.551 0 3.022.538 4.302 1.535ZM8 7.809A1.821 1.821 0 0 0 9.823 6c0-1.004-.82-1.819-1.822-1.819-.088 0-.176.007-.256.022-.03.8-.688 1.44-1.5 1.44h-.037a1.899 1.899 0 0 0-.036.356c0 .997.82 1.811 1.829 1.811Z" fill="url(#a)"/><defs><linearGradient id="a" x1="8" y1="-10.125" x2="8" y2="21.375" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+
+                                                <button type="button" class="bg-transparent border-0 px-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.215 2.932c.292 0 .535.242.535.55v.286c0 .3-.243.55-.535.55H.785a.547.547 0 0 1-.535-.55v-.285c0-.309.243-.55.535-.55h2.187c.444 0 .831-.317.93-.762l.115-.512C4.195.963 4.781.5 5.451.5H8.55a1.49 1.49 0 0 1 1.426 1.123l.123.547a.96.96 0 0 0 .93.762h2.187Zm-1.11 10.418c.228-2.127.627-7.182.627-7.233a.56.56 0 0 0-.135-.419.544.544 0 0 0-.393-.175H1.801a.53.53 0 0 0-.392.175.593.593 0 0 0-.143.419l.04.485c.106 1.322.403 5.006.595 6.748.135 1.284.978 2.091 2.198 2.12.942.022 1.912.03 2.904.03.934 0 1.883-.008 2.854-.03 1.263-.021 2.104-.814 2.247-2.12Z" fill="#C1C7C7"/></svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">#174022</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Darrell Steward</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color d-flex align-items-center">
+                                                <div class="orange rounded-circle me-spacing-1_5"></div>
+                                                Cancelled
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">37.70%</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">20.00 SAR</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal bs-red-pink">Failed</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">-</span>                
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.032 13.02 6.59-8.52c.358-.46.486-.992.366-1.533-.103-.492-.406-.96-.86-1.314L10.023.774C9.06.008 7.866.09 7.182.968l-.741.96a.284.284 0 0 0 .048.394l1.91 1.532c.127.121.223.282.247.476a.709.709 0 0 1-.613.782.635.635 0 0 1-.486-.137L5.581 3.41a.235.235 0 0 0-.318.04L.591 9.498a1.6 1.6 0 0 0-.302 1.346l.597 2.588a.3.3 0 0 0 .294.234l2.627-.032a1.578 1.578 0 0 0 1.225-.613Zm3.678-.805h4.282c.418 0 .758.344.758.768 0 .423-.34.767-.758.767H8.71a.763.763 0 0 1-.758-.768c0-.423.34-.767.758-.767Z" fill="url(#a)"/><defs><linearGradient id="a" x1="7" y1="-11.141" x2="7" y2="24.297" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.073 6c0 1.6 1.31 2.902 2.927 2.902 1.61 0 2.92-1.302 2.92-2.902 0-1.607-1.31-2.91-2.92-2.91A2.917 2.917 0 0 0 5.073 6Zm7.23-4.465c1.28.989 2.37 2.436 3.153 4.247a.546.546 0 0 1 0 .429C13.89 9.833 11.102 12 8 12h-.007C4.898 12 2.11 9.833.543 6.21a.546.546 0 0 1 0-.428C2.11 2.16 4.899 0 7.994 0H8c1.551 0 3.022.538 4.302 1.535ZM8 7.809A1.821 1.821 0 0 0 9.823 6c0-1.004-.82-1.819-1.822-1.819-.088 0-.176.007-.256.022-.03.8-.688 1.44-1.5 1.44h-.037a1.899 1.899 0 0 0-.036.356c0 .997.82 1.811 1.829 1.811Z" fill="url(#a)"/><defs><linearGradient id="a" x1="8" y1="-10.125" x2="8" y2="21.375" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+
+                                                <button type="button" class="bg-transparent border-0 px-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.215 2.932c.292 0 .535.242.535.55v.286c0 .3-.243.55-.535.55H.785a.547.547 0 0 1-.535-.55v-.285c0-.309.243-.55.535-.55h2.187c.444 0 .831-.317.93-.762l.115-.512C4.195.963 4.781.5 5.451.5H8.55a1.49 1.49 0 0 1 1.426 1.123l.123.547a.96.96 0 0 0 .93.762h2.187Zm-1.11 10.418c.228-2.127.627-7.182.627-7.233a.56.56 0 0 0-.135-.419.544.544 0 0 0-.393-.175H1.801a.53.53 0 0 0-.392.175.593.593 0 0 0-.143.419l.04.485c.106 1.322.403 5.006.595 6.748.135 1.284.978 2.091 2.198 2.12.942.022 1.912.03 2.904.03.934 0 1.883-.008 2.854-.03 1.263-.021 2.104-.814 2.247-2.12Z" fill="#C1C7C7"/></svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">#174022</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Devon Lane</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color d-flex align-items-center">
+                                                <div class="light-green rounded-circle me-spacing-1_5"></div>
+                                                Received
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">14.00%</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">10.00 SAR</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal bs-light-dark">Waiting</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Cash On Delivery</span>                
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.032 13.02 6.59-8.52c.358-.46.486-.992.366-1.533-.103-.492-.406-.96-.86-1.314L10.023.774C9.06.008 7.866.09 7.182.968l-.741.96a.284.284 0 0 0 .048.394l1.91 1.532c.127.121.223.282.247.476a.709.709 0 0 1-.613.782.635.635 0 0 1-.486-.137L5.581 3.41a.235.235 0 0 0-.318.04L.591 9.498a1.6 1.6 0 0 0-.302 1.346l.597 2.588a.3.3 0 0 0 .294.234l2.627-.032a1.578 1.578 0 0 0 1.225-.613Zm3.678-.805h4.282c.418 0 .758.344.758.768 0 .423-.34.767-.758.767H8.71a.763.763 0 0 1-.758-.768c0-.423.34-.767.758-.767Z" fill="url(#a)"/><defs><linearGradient id="a" x1="7" y1="-11.141" x2="7" y2="24.297" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.073 6c0 1.6 1.31 2.902 2.927 2.902 1.61 0 2.92-1.302 2.92-2.902 0-1.607-1.31-2.91-2.92-2.91A2.917 2.917 0 0 0 5.073 6Zm7.23-4.465c1.28.989 2.37 2.436 3.153 4.247a.546.546 0 0 1 0 .429C13.89 9.833 11.102 12 8 12h-.007C4.898 12 2.11 9.833.543 6.21a.546.546 0 0 1 0-.428C2.11 2.16 4.899 0 7.994 0H8c1.551 0 3.022.538 4.302 1.535ZM8 7.809A1.821 1.821 0 0 0 9.823 6c0-1.004-.82-1.819-1.822-1.819-.088 0-.176.007-.256.022-.03.8-.688 1.44-1.5 1.44h-.037a1.899 1.899 0 0 0-.036.356c0 .997.82 1.811 1.829 1.811Z" fill="url(#a)"/><defs><linearGradient id="a" x1="8" y1="-10.125" x2="8" y2="21.375" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+
+                                                <button type="button" class="bg-transparent border-0 px-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.215 2.932c.292 0 .535.242.535.55v.286c0 .3-.243.55-.535.55H.785a.547.547 0 0 1-.535-.55v-.285c0-.309.243-.55.535-.55h2.187c.444 0 .831-.317.93-.762l.115-.512C4.195.963 4.781.5 5.451.5H8.55a1.49 1.49 0 0 1 1.426 1.123l.123.547a.96.96 0 0 0 .93.762h2.187Zm-1.11 10.418c.228-2.127.627-7.182.627-7.233a.56.56 0 0 0-.135-.419.544.544 0 0 0-.393-.175H1.801a.53.53 0 0 0-.392.175.593.593 0 0 0-.143.419l.04.485c.106 1.322.403 5.006.595 6.748.135 1.284.978 2.091 2.198 2.12.942.022 1.912.03 2.904.03.934 0 1.883-.008 2.854-.03 1.263-.021 2.104-.814 2.247-2.12Z" fill="#C1C7C7"/></svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">#174022</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Devon Lane</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color d-flex align-items-center">
+                                                <div class="red rounded-circle me-spacing-1_5"></div>
+                                                Failed
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">37.70%</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">16.40 SAR</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal light-orange">Refunded</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Wallet Cash</span>                
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.032 13.02 6.59-8.52c.358-.46.486-.992.366-1.533-.103-.492-.406-.96-.86-1.314L10.023.774C9.06.008 7.866.09 7.182.968l-.741.96a.284.284 0 0 0 .048.394l1.91 1.532c.127.121.223.282.247.476a.709.709 0 0 1-.613.782.635.635 0 0 1-.486-.137L5.581 3.41a.235.235 0 0 0-.318.04L.591 9.498a1.6 1.6 0 0 0-.302 1.346l.597 2.588a.3.3 0 0 0 .294.234l2.627-.032a1.578 1.578 0 0 0 1.225-.613Zm3.678-.805h4.282c.418 0 .758.344.758.768 0 .423-.34.767-.758.767H8.71a.763.763 0 0 1-.758-.768c0-.423.34-.767.758-.767Z" fill="url(#a)"/><defs><linearGradient id="a" x1="7" y1="-11.141" x2="7" y2="24.297" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.073 6c0 1.6 1.31 2.902 2.927 2.902 1.61 0 2.92-1.302 2.92-2.902 0-1.607-1.31-2.91-2.92-2.91A2.917 2.917 0 0 0 5.073 6Zm7.23-4.465c1.28.989 2.37 2.436 3.153 4.247a.546.546 0 0 1 0 .429C13.89 9.833 11.102 12 8 12h-.007C4.898 12 2.11 9.833.543 6.21a.546.546 0 0 1 0-.428C2.11 2.16 4.899 0 7.994 0H8c1.551 0 3.022.538 4.302 1.535ZM8 7.809A1.821 1.821 0 0 0 9.823 6c0-1.004-.82-1.819-1.822-1.819-.088 0-.176.007-.256.022-.03.8-.688 1.44-1.5 1.44h-.037a1.899 1.899 0 0 0-.036.356c0 .997.82 1.811 1.829 1.811Z" fill="url(#a)"/><defs><linearGradient id="a" x1="8" y1="-10.125" x2="8" y2="21.375" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+
+                                                <button type="button" class="bg-transparent border-0 px-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.215 2.932c.292 0 .535.242.535.55v.286c0 .3-.243.55-.535.55H.785a.547.547 0 0 1-.535-.55v-.285c0-.309.243-.55.535-.55h2.187c.444 0 .831-.317.93-.762l.115-.512C4.195.963 4.781.5 5.451.5H8.55a1.49 1.49 0 0 1 1.426 1.123l.123.547a.96.96 0 0 0 .93.762h2.187Zm-1.11 10.418c.228-2.127.627-7.182.627-7.233a.56.56 0 0 0-.135-.419.544.544 0 0 0-.393-.175H1.801a.53.53 0 0 0-.392.175.593.593 0 0 0-.143.419l.04.485c.106 1.322.403 5.006.595 6.748.135 1.284.978 2.091 2.198 2.12.942.022 1.912.03 2.904.03.934 0 1.883-.008 2.854-.03 1.263-.021 2.104-.814 2.247-2.12Z" fill="#C1C7C7"/></svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">#174022</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Devon Lane</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color d-flex align-items-center">
+                                                <div class="green rounded-circle me-spacing-1_5"></div>
+                                                Delivered
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">37.70%</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">16.40 SAR</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal green-color">Successful</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Wallet Cash</span>                
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.032 13.02 6.59-8.52c.358-.46.486-.992.366-1.533-.103-.492-.406-.96-.86-1.314L10.023.774C9.06.008 7.866.09 7.182.968l-.741.96a.284.284 0 0 0 .048.394l1.91 1.532c.127.121.223.282.247.476a.709.709 0 0 1-.613.782.635.635 0 0 1-.486-.137L5.581 3.41a.235.235 0 0 0-.318.04L.591 9.498a1.6 1.6 0 0 0-.302 1.346l.597 2.588a.3.3 0 0 0 .294.234l2.627-.032a1.578 1.578 0 0 0 1.225-.613Zm3.678-.805h4.282c.418 0 .758.344.758.768 0 .423-.34.767-.758.767H8.71a.763.763 0 0 1-.758-.768c0-.423.34-.767.758-.767Z" fill="url(#a)"/><defs><linearGradient id="a" x1="7" y1="-11.141" x2="7" y2="24.297" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.073 6c0 1.6 1.31 2.902 2.927 2.902 1.61 0 2.92-1.302 2.92-2.902 0-1.607-1.31-2.91-2.92-2.91A2.917 2.917 0 0 0 5.073 6Zm7.23-4.465c1.28.989 2.37 2.436 3.153 4.247a.546.546 0 0 1 0 .429C13.89 9.833 11.102 12 8 12h-.007C4.898 12 2.11 9.833.543 6.21a.546.546 0 0 1 0-.428C2.11 2.16 4.899 0 7.994 0H8c1.551 0 3.022.538 4.302 1.535ZM8 7.809A1.821 1.821 0 0 0 9.823 6c0-1.004-.82-1.819-1.822-1.819-.088 0-.176.007-.256.022-.03.8-.688 1.44-1.5 1.44h-.037a1.899 1.899 0 0 0-.036.356c0 .997.82 1.811 1.829 1.811Z" fill="url(#a)"/><defs><linearGradient id="a" x1="8" y1="-10.125" x2="8" y2="21.375" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+
+                                                <button type="button" class="bg-transparent border-0 px-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.215 2.932c.292 0 .535.242.535.55v.286c0 .3-.243.55-.535.55H.785a.547.547 0 0 1-.535-.55v-.285c0-.309.243-.55.535-.55h2.187c.444 0 .831-.317.93-.762l.115-.512C4.195.963 4.781.5 5.451.5H8.55a1.49 1.49 0 0 1 1.426 1.123l.123.547a.96.96 0 0 0 .93.762h2.187Zm-1.11 10.418c.228-2.127.627-7.182.627-7.233a.56.56 0 0 0-.135-.419.544.544 0 0 0-.393-.175H1.801a.53.53 0 0 0-.392.175.593.593 0 0 0-.143.419l.04.485c.106 1.322.403 5.006.595 6.748.135 1.284.978 2.091 2.198 2.12.942.022 1.912.03 2.904.03.934 0 1.883-.008 2.854-.03 1.263-.021 2.104-.814 2.247-2.12Z" fill="#C1C7C7"/></svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">#174022</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Devon Lane</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color d-flex align-items-center">
+                                                <div class="light-green rounded-circle me-spacing-1_5"></div>
+                                                Received
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">14.00%</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">10.00 SAR</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal bs-light-dark">Waiting</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Cash On Delivery</span>                
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.032 13.02 6.59-8.52c.358-.46.486-.992.366-1.533-.103-.492-.406-.96-.86-1.314L10.023.774C9.06.008 7.866.09 7.182.968l-.741.96a.284.284 0 0 0 .048.394l1.91 1.532c.127.121.223.282.247.476a.709.709 0 0 1-.613.782.635.635 0 0 1-.486-.137L5.581 3.41a.235.235 0 0 0-.318.04L.591 9.498a1.6 1.6 0 0 0-.302 1.346l.597 2.588a.3.3 0 0 0 .294.234l2.627-.032a1.578 1.578 0 0 0 1.225-.613Zm3.678-.805h4.282c.418 0 .758.344.758.768 0 .423-.34.767-.758.767H8.71a.763.763 0 0 1-.758-.768c0-.423.34-.767.758-.767Z" fill="url(#a)"/><defs><linearGradient id="a" x1="7" y1="-11.141" x2="7" y2="24.297" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.073 6c0 1.6 1.31 2.902 2.927 2.902 1.61 0 2.92-1.302 2.92-2.902 0-1.607-1.31-2.91-2.92-2.91A2.917 2.917 0 0 0 5.073 6Zm7.23-4.465c1.28.989 2.37 2.436 3.153 4.247a.546.546 0 0 1 0 .429C13.89 9.833 11.102 12 8 12h-.007C4.898 12 2.11 9.833.543 6.21a.546.546 0 0 1 0-.428C2.11 2.16 4.899 0 7.994 0H8c1.551 0 3.022.538 4.302 1.535ZM8 7.809A1.821 1.821 0 0 0 9.823 6c0-1.004-.82-1.819-1.822-1.819-.088 0-.176.007-.256.022-.03.8-.688 1.44-1.5 1.44h-.037a1.899 1.899 0 0 0-.036.356c0 .997.82 1.811 1.829 1.811Z" fill="url(#a)"/><defs><linearGradient id="a" x1="8" y1="-10.125" x2="8" y2="21.375" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+
+                                                <button type="button" class="bg-transparent border-0 px-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.215 2.932c.292 0 .535.242.535.55v.286c0 .3-.243.55-.535.55H.785a.547.547 0 0 1-.535-.55v-.285c0-.309.243-.55.535-.55h2.187c.444 0 .831-.317.93-.762l.115-.512C4.195.963 4.781.5 5.451.5H8.55a1.49 1.49 0 0 1 1.426 1.123l.123.547a.96.96 0 0 0 .93.762h2.187Zm-1.11 10.418c.228-2.127.627-7.182.627-7.233a.56.56 0 0 0-.135-.419.544.544 0 0 0-.393-.175H1.801a.53.53 0 0 0-.392.175.593.593 0 0 0-.143.419l.04.485c.106 1.322.403 5.006.595 6.748.135 1.284.978 2.091 2.198 2.12.942.022 1.912.03 2.904.03.934 0 1.883-.008 2.854-.03 1.263-.021 2.104-.814 2.247-2.12Z" fill="#C1C7C7"/></svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">#174022</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Devon Lane</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color d-flex align-items-center">
+                                                <div class="red rounded-circle me-spacing-1_5"></div>
+                                                Failed
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">37.70%</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">16.40 SAR</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal light-orange">Refunded</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Wallet Cash</span>                
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.032 13.02 6.59-8.52c.358-.46.486-.992.366-1.533-.103-.492-.406-.96-.86-1.314L10.023.774C9.06.008 7.866.09 7.182.968l-.741.96a.284.284 0 0 0 .048.394l1.91 1.532c.127.121.223.282.247.476a.709.709 0 0 1-.613.782.635.635 0 0 1-.486-.137L5.581 3.41a.235.235 0 0 0-.318.04L.591 9.498a1.6 1.6 0 0 0-.302 1.346l.597 2.588a.3.3 0 0 0 .294.234l2.627-.032a1.578 1.578 0 0 0 1.225-.613Zm3.678-.805h4.282c.418 0 .758.344.758.768 0 .423-.34.767-.758.767H8.71a.763.763 0 0 1-.758-.768c0-.423.34-.767.758-.767Z" fill="url(#a)"/><defs><linearGradient id="a" x1="7" y1="-11.141" x2="7" y2="24.297" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.073 6c0 1.6 1.31 2.902 2.927 2.902 1.61 0 2.92-1.302 2.92-2.902 0-1.607-1.31-2.91-2.92-2.91A2.917 2.917 0 0 0 5.073 6Zm7.23-4.465c1.28.989 2.37 2.436 3.153 4.247a.546.546 0 0 1 0 .429C13.89 9.833 11.102 12 8 12h-.007C4.898 12 2.11 9.833.543 6.21a.546.546 0 0 1 0-.428C2.11 2.16 4.899 0 7.994 0H8c1.551 0 3.022.538 4.302 1.535ZM8 7.809A1.821 1.821 0 0 0 9.823 6c0-1.004-.82-1.819-1.822-1.819-.088 0-.176.007-.256.022-.03.8-.688 1.44-1.5 1.44h-.037a1.899 1.899 0 0 0-.036.356c0 .997.82 1.811 1.829 1.811Z" fill="url(#a)"/><defs><linearGradient id="a" x1="8" y1="-10.125" x2="8" y2="21.375" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+
+                                                <button type="button" class="bg-transparent border-0 px-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.215 2.932c.292 0 .535.242.535.55v.286c0 .3-.243.55-.535.55H.785a.547.547 0 0 1-.535-.55v-.285c0-.309.243-.55.535-.55h2.187c.444 0 .831-.317.93-.762l.115-.512C4.195.963 4.781.5 5.451.5H8.55a1.49 1.49 0 0 1 1.426 1.123l.123.547a.96.96 0 0 0 .93.762h2.187Zm-1.11 10.418c.228-2.127.627-7.182.627-7.233a.56.56 0 0 0-.135-.419.544.544 0 0 0-.393-.175H1.801a.53.53 0 0 0-.392.175.593.593 0 0 0-.143.419l.04.485c.106 1.322.403 5.006.595 6.748.135 1.284.978 2.091 2.198 2.12.942.022 1.912.03 2.904.03.934 0 1.883-.008 2.854-.03 1.263-.021 2.104-.814 2.247-2.12Z" fill="#C1C7C7"/></svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">#174022</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Devon Lane</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color d-flex align-items-center">
+                                                <div class="green rounded-circle me-spacing-1_5"></div>
+                                                Delivered
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">37.70%</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">16.40 SAR</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal green-color">Successful</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Wallet Cash</span>                
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.032 13.02 6.59-8.52c.358-.46.486-.992.366-1.533-.103-.492-.406-.96-.86-1.314L10.023.774C9.06.008 7.866.09 7.182.968l-.741.96a.284.284 0 0 0 .048.394l1.91 1.532c.127.121.223.282.247.476a.709.709 0 0 1-.613.782.635.635 0 0 1-.486-.137L5.581 3.41a.235.235 0 0 0-.318.04L.591 9.498a1.6 1.6 0 0 0-.302 1.346l.597 2.588a.3.3 0 0 0 .294.234l2.627-.032a1.578 1.578 0 0 0 1.225-.613Zm3.678-.805h4.282c.418 0 .758.344.758.768 0 .423-.34.767-.758.767H8.71a.763.763 0 0 1-.758-.768c0-.423.34-.767.758-.767Z" fill="url(#a)"/><defs><linearGradient id="a" x1="7" y1="-11.141" x2="7" y2="24.297" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.073 6c0 1.6 1.31 2.902 2.927 2.902 1.61 0 2.92-1.302 2.92-2.902 0-1.607-1.31-2.91-2.92-2.91A2.917 2.917 0 0 0 5.073 6Zm7.23-4.465c1.28.989 2.37 2.436 3.153 4.247a.546.546 0 0 1 0 .429C13.89 9.833 11.102 12 8 12h-.007C4.898 12 2.11 9.833.543 6.21a.546.546 0 0 1 0-.428C2.11 2.16 4.899 0 7.994 0H8c1.551 0 3.022.538 4.302 1.535ZM8 7.809A1.821 1.821 0 0 0 9.823 6c0-1.004-.82-1.819-1.822-1.819-.088 0-.176.007-.256.022-.03.8-.688 1.44-1.5 1.44h-.037a1.899 1.899 0 0 0-.036.356c0 .997.82 1.811 1.829 1.811Z" fill="url(#a)"/><defs><linearGradient id="a" x1="8" y1="-10.125" x2="8" y2="21.375" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+
+                                                <button type="button" class="bg-transparent border-0 px-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.215 2.932c.292 0 .535.242.535.55v.286c0 .3-.243.55-.535.55H.785a.547.547 0 0 1-.535-.55v-.285c0-.309.243-.55.535-.55h2.187c.444 0 .831-.317.93-.762l.115-.512C4.195.963 4.781.5 5.451.5H8.55a1.49 1.49 0 0 1 1.426 1.123l.123.547a.96.96 0 0 0 .93.762h2.187Zm-1.11 10.418c.228-2.127.627-7.182.627-7.233a.56.56 0 0 0-.135-.419.544.544 0 0 0-.393-.175H1.801a.53.53 0 0 0-.392.175.593.593 0 0 0-.143.419l.04.485c.106 1.322.403 5.006.595 6.748.135 1.284.978 2.091 2.198 2.12.942.022 1.912.03 2.904.03.934 0 1.883-.008 2.854-.03 1.263-.021 2.104-.814 2.247-2.12Z" fill="#C1C7C7"/></svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">#174022</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Devon Lane</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color d-flex align-items-center">
+                                                <div class="red rounded-circle me-spacing-1_5"></div>
+                                                Failed
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">37.70%</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">16.40 SAR</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal light-orange">Refunded</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Wallet Cash</span>                
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.032 13.02 6.59-8.52c.358-.46.486-.992.366-1.533-.103-.492-.406-.96-.86-1.314L10.023.774C9.06.008 7.866.09 7.182.968l-.741.96a.284.284 0 0 0 .048.394l1.91 1.532c.127.121.223.282.247.476a.709.709 0 0 1-.613.782.635.635 0 0 1-.486-.137L5.581 3.41a.235.235 0 0 0-.318.04L.591 9.498a1.6 1.6 0 0 0-.302 1.346l.597 2.588a.3.3 0 0 0 .294.234l2.627-.032a1.578 1.578 0 0 0 1.225-.613Zm3.678-.805h4.282c.418 0 .758.344.758.768 0 .423-.34.767-.758.767H8.71a.763.763 0 0 1-.758-.768c0-.423.34-.767.758-.767Z" fill="url(#a)"/><defs><linearGradient id="a" x1="7" y1="-11.141" x2="7" y2="24.297" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.073 6c0 1.6 1.31 2.902 2.927 2.902 1.61 0 2.92-1.302 2.92-2.902 0-1.607-1.31-2.91-2.92-2.91A2.917 2.917 0 0 0 5.073 6Zm7.23-4.465c1.28.989 2.37 2.436 3.153 4.247a.546.546 0 0 1 0 .429C13.89 9.833 11.102 12 8 12h-.007C4.898 12 2.11 9.833.543 6.21a.546.546 0 0 1 0-.428C2.11 2.16 4.899 0 7.994 0H8c1.551 0 3.022.538 4.302 1.535ZM8 7.809A1.821 1.821 0 0 0 9.823 6c0-1.004-.82-1.819-1.822-1.819-.088 0-.176.007-.256.022-.03.8-.688 1.44-1.5 1.44h-.037a1.899 1.899 0 0 0-.036.356c0 .997.82 1.811 1.829 1.811Z" fill="url(#a)"/><defs><linearGradient id="a" x1="8" y1="-10.125" x2="8" y2="21.375" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+
+                                                <button type="button" class="bg-transparent border-0 px-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.215 2.932c.292 0 .535.242.535.55v.286c0 .3-.243.55-.535.55H.785a.547.547 0 0 1-.535-.55v-.285c0-.309.243-.55.535-.55h2.187c.444 0 .831-.317.93-.762l.115-.512C4.195.963 4.781.5 5.451.5H8.55a1.49 1.49 0 0 1 1.426 1.123l.123.547a.96.96 0 0 0 .93.762h2.187Zm-1.11 10.418c.228-2.127.627-7.182.627-7.233a.56.56 0 0 0-.135-.419.544.544 0 0 0-.393-.175H1.801a.53.53 0 0 0-.392.175.593.593 0 0 0-.143.419l.04.485c.106 1.322.403 5.006.595 6.748.135 1.284.978 2.091 2.198 2.12.942.022 1.912.03 2.904.03.934 0 1.883-.008 2.854-.03 1.263-.021 2.104-.814 2.247-2.12Z" fill="#C1C7C7"/></svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">#174022</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Devon Lane</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color d-flex align-items-center">
+                                                <div class="light-green rounded-circle me-spacing-1_5"></div>
+                                                Received
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">14.00%</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">10.00 SAR</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal bs-light-dark">Waiting</span>
+                                        </td>
+                                        <td>
+                                            <span class="font-14 fw-normal heading-color">Cash On Delivery</span>                
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.032 13.02 6.59-8.52c.358-.46.486-.992.366-1.533-.103-.492-.406-.96-.86-1.314L10.023.774C9.06.008 7.866.09 7.182.968l-.741.96a.284.284 0 0 0 .048.394l1.91 1.532c.127.121.223.282.247.476a.709.709 0 0 1-.613.782.635.635 0 0 1-.486-.137L5.581 3.41a.235.235 0 0 0-.318.04L.591 9.498a1.6 1.6 0 0 0-.302 1.346l.597 2.588a.3.3 0 0 0 .294.234l2.627-.032a1.578 1.578 0 0 0 1.225-.613Zm3.678-.805h4.282c.418 0 .758.344.758.768 0 .423-.34.767-.758.767H8.71a.763.763 0 0 1-.758-.768c0-.423.34-.767.758-.767Z" fill="url(#a)"/><defs><linearGradient id="a" x1="7" y1="-11.141" x2="7" y2="24.297" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+                                                <button type="button" class="bg-transparent border-0 px-3 border-right">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.073 6c0 1.6 1.31 2.902 2.927 2.902 1.61 0 2.92-1.302 2.92-2.902 0-1.607-1.31-2.91-2.92-2.91A2.917 2.917 0 0 0 5.073 6Zm7.23-4.465c1.28.989 2.37 2.436 3.153 4.247a.546.546 0 0 1 0 .429C13.89 9.833 11.102 12 8 12h-.007C4.898 12 2.11 9.833.543 6.21a.546.546 0 0 1 0-.428C2.11 2.16 4.899 0 7.994 0H8c1.551 0 3.022.538 4.302 1.535ZM8 7.809A1.821 1.821 0 0 0 9.823 6c0-1.004-.82-1.819-1.822-1.819-.088 0-.176.007-.256.022-.03.8-.688 1.44-1.5 1.44h-.037a1.899 1.899 0 0 0-.036.356c0 .997.82 1.811 1.829 1.811Z" fill="url(#a)"/><defs><linearGradient id="a" x1="8" y1="-10.125" x2="8" y2="21.375" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
+                                                </button>
+
+                                                <button type="button" class="bg-transparent border-0 px-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.215 2.932c.292 0 .535.242.535.55v.286c0 .3-.243.55-.535.55H.785a.547.547 0 0 1-.535-.55v-.285c0-.309.243-.55.535-.55h2.187c.444 0 .831-.317.93-.762l.115-.512C4.195.963 4.781.5 5.451.5H8.55a1.49 1.49 0 0 1 1.426 1.123l.123.547a.96.96 0 0 0 .93.762h2.187Zm-1.11 10.418c.228-2.127.627-7.182.627-7.233a.56.56 0 0 0-.135-.419.544.544 0 0 0-.393-.175H1.801a.53.53 0 0 0-.392.175.593.593 0 0 0-.143.419l.04.485c.106 1.322.403 5.006.595 6.748.135 1.284.978 2.091 2.198 2.12.942.022 1.912.03 2.904.03.934 0 1.883-.008 2.854-.03 1.263-.021 2.104-.814 2.247-2.12Z" fill="#C1C7C7"/></svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between pt-spacing-5 pb-spacing-1 px-spacing-10">
+                            <span class="d3-color fw-normal font-16 white-space-nowrap">9 of 174,028</span>
+                            <div class=" white-space-nowrap">
+                                <button type="button" class="border-0 bg-transparent">
+                                    <img src="images/Arrow-Left_Circle.png" alt="">
+                                </button>
+                                <span class="heading-color fw-normal font-16">01 / 132</span>
+                                <button type="button" class="border-0 bg-transparent">
+                                    <img src="images/Arrow-Right_Circle.png" alt="">
+                                </button>
+                            </div>
+                            <span class="d3-color fw-normal font-16 white-space-nowrap">View 1 of 132</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- javascript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

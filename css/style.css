@@ -323,6 +323,9 @@ a{
 .bs-pink{
     color: var(--bs-pink) !important;
 }
+.bs-red-pink{
+    color: var(--bs-red-pink) !important;
+}
 .bg-light-pink{
     background-color: var(--bg-light-pink) !important;
 }
@@ -332,6 +335,10 @@ a{
 .d1-color{
     color: var(--d1-color) !important;
 }
+.light-orange{
+    color: #F2A359 !important;
+}
+
 .border-right{
     border-right: 1px solid #DDD !important;
 }
@@ -350,8 +357,11 @@ a{
 .bs-green{
     background-color: var(--bs-green);
 }
+.green-color{
+    color: var(--bs-green) !important;
+}
 .bs-red{
-    background-color: var(--bs-red);
+    background-color: var(--bs-red) !important;
 }
 .input-bg{
     background: #FAFAFA !important;
@@ -642,8 +652,16 @@ table td {
     height: 8px;
     background-color: var(--green-secondary);
 }
-
-
+.orange{
+    width: 8px;
+    height: 8px;
+    background-color: #F5B57A !important;
+}
+.light-green{
+    width: 8px;
+    height: 8px;
+    background-color: #BAF59E !important;
+}
 
 
 /*=============================== responcive device ===============================*/
