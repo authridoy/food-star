@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>user-management</title>
+    <title>Edit Order</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -12,6 +12,7 @@
 </head>
 <body>
     
+
     <div class="d-flex">
         <aside id="sidebar" class="sidebar collapse d-lg-block">
             <div class="main-logo py-spacing-9 px-spacing-6"> 
@@ -75,7 +76,7 @@
                     <button class="btn d-lg-none sidebar-toggle" id="sidebar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="true" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <h3 class="heading-color fw-semibold d-none d-sm-block">Add New User</h3>
+                    <h3 class="heading-color fw-semibold d-none d-sm-block">Edit Order</h3>
                 </div>
                 <div class="d-flex align-items-center ms-auto">
 
@@ -145,79 +146,55 @@
             </header>
             <div class="content-container">
                 <div class="content">
-                   
                     <div class="card px-spacing-13 px-md-spacing-5 py-spacing-8">
-                        <h4 class="bs-light-dark fw-normal">User Details</h4>
-                        <div class="mt-4 d-flex align-items-center px-spacing-3 py-spacing-3 rounded-20" style="border: 1px dashed var(--border-color); max-width: 480px;">
-                            <img src="images/update-image.png" alt="image" style="width: 108px; height: 108px;">
-                            <div class="text-center ml-spacing-10_5">
-                                <span class="bs-light-dar font-12 fw-normal">Restaurant Image</span>
-                                <p class="mt-2 heading-color fw-normal font-12">Drop your file here to upload (Only JPEG or PNG)</p>
-                                <button type="button" class="white-btn font-14 px-spacing-4_5 py-2 rounded-14 mt-3">
-                                    <span>Browse Image</span>
-                                </button>
-                            </div>
-                        </div>
+                        <h4 class="bs-light-dark fw-normal">Edit Order</h4>
                         <div class="mt-4">
                             <form>
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="input-item mb-4">
-                                            <label for="newuserName" class="form-label heading-color font-16 fw-normal">Name</label>
+                                            <label for="order-client" class="form-label heading-color font-16 fw-normal">Client</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuserName" placeholder="Enter Restaurant Name">
+                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="order-client" placeholder="Enter Restaurant Name">
                                             </div>
                                         </div>
     
                                         <div class="input-item mb-4">
-                                            <label for="newuserEmail" class="form-label heading-color font-16 fw-normal">Email</label>
+                                            <label for="order-delivery" class="form-label heading-color font-16 fw-normal">Delivery Valet</label>
                                             <div class="input-group">
-                                                <input type="email" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuserEmail" placeholder="Enter Email">
+                                                <input type="number" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="order-delivery" placeholder="Select Delivery Valet">
                                             </div>
                                         </div>
     
-                                        <div class="input-item mb-4">
-                                            <label for="newuserpassword" class="form-label heading-color font-16 fw-normal">Password</label>
+                                        <div class="input-item mb-4 heading-colorplaceholder">
+                                            <label for="order-status" class="form-label heading-color font-16 fw-normal">Order Status</label>
                                             <div class="input-group">
-                                                <input type="password" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuserpassword" placeholder="Enter Password">
-                                            </div>
-                                        </div>
-
-                                        <div class="input-item mb-4">
-                                            <label for="newuserwallet" class="form-label heading-color font-16 fw-normal">Wallet Cash</label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuserwallet" placeholder="Enter Cash Amount">
+                                                <input type="number" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="order-status" placeholder="Order Received">
                                             </div>
                                         </div>
                                     
                                     </div>
 
                                     <div class="col-lg-6">
+
                                         <div class="input-item mb-4">
-                                            <label for="newuser2Phone" class="form-label heading-color font-16 fw-normal">Phone</label>
+                                            <label for="order-tax-amount" class="form-label heading-color font-16 fw-normal">Tax</label>
                                             <div class="input-group">
-                                                <input type="tel" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuser2Phone" placeholder="Enter Phone Number">
+                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="order-tax-amount" placeholder="Enter Tax Amount">
                                             </div>
                                         </div>
 
                                         <div class="input-item mb-4">
-                                            <label for="newuser2Address" class="form-label heading-color font-16 fw-normal">Address</label>
+                                            <label for="order-free-dalivery" class="form-label heading-color font-16 fw-normal">Delivery Fee</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuser2Address" placeholder="Enter Address">
-                                            </div>
-                                        </div>
-
-                                        <div class="input-item mb-4">
-                                            <label for="newuser2password" class="form-label heading-color font-16 fw-normal">Confirm Password</label>
-                                            <div class="input-group">
-                                                <input type="password" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuser2password" placeholder="Enter Password Again">
+                                                <input type="password" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="order-free-dalivery" placeholder="Enter Address">
                                             </div>
                                         </div>
 
                                         <div class="input-item mb-4 heading-colorplaceholder">
-                                            <label for="newuser2userstatus" class="form-label heading-color font-16 fw-normal">Status</label>
+                                            <label for="orderpayment-status" class="form-label heading-color font-16 fw-normal">Payment Status</label>
                                             <div class="input-group">
-                                                <input type="number" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg" id="newuser2userstatus" placeholder="Active">
+                                                <input type="number" class="form-control py-spacing-3_5 px-spacing-3_5 rounded-12 border input-bg fw-normal" id="orderpayment-status" placeholder="Waiting">
                                             </div>
                                         </div>
 
@@ -234,7 +211,6 @@
                             </form>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </main>
