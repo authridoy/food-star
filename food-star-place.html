@@ -11,6 +11,39 @@
 
 </head>
 <body>
+
+    <!-- add new place modal  -->
+
+    <div class="modal fade" id="newplaceToggle" aria-hidden="true" aria-labelledby="newplaceToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content py-spacing-8 px-4 rounded-24" style="width: unset;">
+                <div class="d-flex align-items-center justify-content-between pb-spacing-4_5">
+                    <p>Please select the place you want to add.</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="py-spacing-3 ps-spacing-3 pe-spacing-4 rounded-26" style="width: 364px; background: #F9F8F8;">
+                        <a href="restaurant.html" class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="images/newplaceresturentmodal1.png" alt="image" style="width: 96px; height: 96px;">
+                                <h2 class="ms-spacing-3 liniar-pink-color">Restaurant</h2>
+                            </div>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" fill="none"><path d="M16.75 7.726h-15" stroke="url(#a)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m10.701 1.701 6.05 6.024-6.05 6.025" stroke="url(#b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="a" x1="-10.906" y1="7.726" x2="28.469" y2="7.726" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient><linearGradient id="b" x1="5.596" y1="7.726" x2="21.478" y2="7.726" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg> -->
+                        </a>
+                    </div>
+                    <div class="py-spacing-3 ps-spacing-3 pe-spacing-4 rounded-26 ms-lg-4" style="width: 364px; background: #F9F8F8;">
+                        <a href="supermarket.html" class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="images/newplaceresturentmodal2.png" alt="image" style="width: 96px; height: 96px;">
+                                <h2 class="ms-spacing-3 liniar-pink-color">Supermarket</h2>
+                            </div>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" fill="none"><path d="M16.75 7.726h-15" stroke="url(#a)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m10.701 1.701 6.05 6.024-6.05 6.025" stroke="url(#b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="a" x1="-10.906" y1="7.726" x2="28.469" y2="7.726" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient><linearGradient id="b" x1="5.596" y1="7.726" x2="21.478" y2="7.726" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg> -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
 
     <div class="d-flex">
@@ -30,7 +63,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="d-flex align-items-center px-4 py-2" href="food-star-place.html">
+                        <a class="d-flex align-items-center px-4 py-2 active" href="food-star-place.html">
                             <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.109 4.334a.418.418 0 0 0 .036-.188h.022A4.16 4.16 0 0 0 8.004.167a4.16 4.16 0 0 0-4.162 3.979.541.541 0 0 0 0 .188h-.066c-1.067 0-2.209.705-2.54 2.6l-.649 5.162c-.53 3.79 1.422 4.738 3.97 4.738h6.908c2.541 0 4.434-1.372 3.963-4.738l-.641-5.162c-.39-1.842-1.495-2.6-2.548-2.6h-.13Zm-1.198 0a.54.54 0 0 1-.036-.188c0-1.598-1.3-2.894-2.904-2.894a2.898 2.898 0 0 0-2.903 2.894.54.54 0 0 1 0 .188h5.843Zm-5.33 4.29a.748.748 0 0 1-.737-.758c0-.419.33-.758.737-.758s.736.34.736.758c0 .419-.33.758-.736.758Zm4.087-.758c0 .419.33.758.737.758s.736-.34.736-.758a.747.747 0 0 0-.736-.758.748.748 0 0 0-.737.758Z" fill="#B9BFC0"/></svg>
                             Places
                         </a>
@@ -42,19 +75,19 @@
                         </a>
                     </li>        
                     <li>
-                        <a class="d-flex align-items-center px-4 py-2" href="#role-management">
+                        <a class="d-flex align-items-center px-4 py-2" href="role-management.html">
                             <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.704 1.519c-.67 0-1.24.466-1.4 1.094h5.382a1.453 1.453 0 0 0-1.4-1.094H8.704Zm5.503 1.094h1.981C18.29 2.613 20 4.344 20 6.47c0 0-.06.9-.08 2.154a.33.33 0 0 1-.13.255c-.48.355-.92.65-.96.67-1.661 1.113-3.591 1.897-5.647 2.287a.318.318 0 0 1-.335-.163 3.296 3.296 0 0 0-2.853-1.649 3.35 3.35 0 0 0-2.872 1.643.319.319 0 0 1-.333.16 15.491 15.491 0 0 1-5.62-2.269l-.96-.668a.286.286 0 0 1-.13-.243C.05 8.132 0 6.471 0 6.471c0-2.127 1.71-3.858 3.812-3.858h1.97C5.974 1.144 7.205 0 8.705 0h2.582c1.5 0 2.731 1.144 2.921 2.613Zm5.453 8.202-.04.02c-2.021 1.357-4.452 2.259-7.004 2.633a.753.753 0 0 1-.82-.546 1.816 1.816 0 0 0-1.781-1.378h-.03c-.85 0-1.56.547-1.78 1.378a.753.753 0 0 1-.821.546C4.832 13.094 2.4 12.192.38 10.835c-.01-.01-.11-.07-.19-.02-.09.05-.09.172-.09.172l.07 5.165C.17 18.279 1.87 20 3.972 20h12.046c2.101 0 3.802-1.721 3.802-3.848l.08-5.165s0-.121-.09-.172c-.05-.03-.11-.02-.15 0Zm-8.915 4.243c0 .426-.33.76-.75.76a.754.754 0 0 1-.75-.76v-1.306c0-.415.34-.76.75-.76.42 0 .75.345.75.76v1.306Z" fill="#B9BFC0"/></svg>
                             Role Management
                         </a>
                     </li>        
                     <li>
-                        <a class="d-flex align-items-center px-4 py-2" href="#user-management">
+                        <a class="d-flex align-items-center px-4 py-2" href="user-management.html">
                             <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.294 5.291A5.274 5.274 0 0 1 8 10.583a5.275 5.275 0 0 1-5.294-5.292A5.274 5.274 0 0 1 8 0a5.273 5.273 0 0 1 5.294 5.291ZM8 20c-4.338 0-8-.705-8-3.425 0-2.721 3.685-3.401 8-3.401 4.339 0 8 .705 8 3.425C16 19.32 12.315 20 8 20Z" fill="#B9BFC0"/></svg>
                             User Management
                         </a>
                     </li>        
                     <li>
-                        <a class="d-flex align-items-center px-4 py-2" href="#orders">
+                        <a class="d-flex align-items-center px-4 py-2" href="order.html">
                             <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M19.4354 0.581983C18.9352 0.0685981 18.1949 -0.122663 17.5046 0.0786645L1.408 4.75952C0.679698 4.96186 0.163487 5.54269 0.0244302 6.28055C-0.117628 7.0315 0.378575 7.98479 1.02684 8.38342L6.0599 11.4768C6.57611 11.7939 7.24238 11.7144 7.66956 11.2835L13.4329 5.4843C13.723 5.18231 14.2032 5.18231 14.4934 5.4843C14.7835 5.77623 14.7835 6.24935 14.4934 6.55134L8.71999 12.3516C8.29181 12.7814 8.21178 13.4508 8.52691 13.9702L11.6022 19.0538C11.9623 19.6577 12.5826 20 13.2628 20C13.3429 20 13.4329 20 13.513 19.9899C14.2933 19.8893 14.9135 19.3558 15.1436 18.6008L19.9156 2.52479C20.1257 1.84028 19.9356 1.09537 19.4354 0.581983Z" fill="#B9BFC0"/>
                             </svg>
@@ -62,7 +95,7 @@
                         </a>
                     </li>        
                     <li>
-                        <a class="d-flex align-items-center px-4 py-2" href="#manage-services">
+                        <a class="d-flex align-items-center px-4 py-2" href="#">
                             <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.402 11.58c.358.19.634.49.828.79.378.62.348 1.38-.02 2.05l-.716 1.2a2.13 2.13 0 0 1-1.808 1.04c-.358 0-.757-.1-1.084-.3-.266-.17-.572-.23-.9-.23-1.01 0-1.86.83-1.89 1.82 0 1.15-.94 2.05-2.115 2.05h-1.39c-1.186 0-2.126-.9-2.126-2.05-.02-.99-.868-1.82-1.88-1.82-.337 0-.644.06-.9.23-.327.2-.735.3-1.083.3-.736 0-1.44-.4-1.819-1.04l-.705-1.2c-.378-.65-.399-1.43-.02-2.05.163-.3.47-.6.817-.79.286-.14.47-.37.644-.64.511-.86.204-1.99-.664-2.5a2.044 2.044 0 0 1-.757-2.83L1.5 4.43a2.124 2.124 0 0 1 2.882-.76c.89.48 2.044.16 2.565-.69.164-.28.256-.58.235-.88-.02-.39.092-.76.286-1.06A2.195 2.195 0 0 1 9.277 0h1.44c.756 0 1.441.42 1.82 1.04.183.3.306.67.275 1.06-.02.3.072.6.235.88.521.85 1.676 1.17 2.576.69a2.112 2.112 0 0 1 2.871.76l.685 1.18c.593.99.266 2.26-.756 2.83-.869.51-1.175 1.64-.654 2.5.163.27.347.5.633.64ZM7.11 10.01c0 1.57 1.298 2.82 2.902 2.82s2.872-1.25 2.872-2.82c0-1.57-1.268-2.83-2.872-2.83-1.604 0-2.902 1.26-2.902 2.83Z" fill="#B9BFC0"/></svg>
                             Manage Services
                         </a>
@@ -173,7 +206,7 @@
                                     <svg class="me-spacing-2_5" xmlns="http://www.w3.org/2000/svg" width="18" height="21" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m9.153 15.14 2.842-2.87a.75.75 0 0 0-.01-1.06.73.73 0 0 0-1.04 0l-1.574 1.6V7.99a.737.737 0 1 0-1.475 0v4.82l-1.574-1.6a.73.73 0 0 0-1.04 0 .76.76 0 0 0 0 1.06l2.832 2.87a.768.768 0 0 0 .525.22.768.768 0 0 0 .515-.22Zm7.175-7.614c.233-.003.486-.006.717-.006.257 0 .455.2.455.45v8.04c0 2.48-2 4.49-4.455 4.49H5.173C2.59 20.5.5 18.39.5 15.79V5.01C.5 2.53 2.49.5 4.965.5h5.287c.248 0 .456.21.456.46v3.22c0 1.83 1.485 3.33 3.307 3.34.418 0 .793.003 1.12.006.253.002.478.004.672.004.14 0 .324-.002.521-.004Zm.277-1.46c-.813.003-1.773 0-2.463-.007-1.095 0-1.997-.91-1.997-2.017V1.406c0-.43.518-.645.813-.334l2.916 3.062 1.071 1.125a.477.477 0 0 1-.34.807Z" fill="url(#a)"/><defs><linearGradient id="a" x1="9" y1="-16.375" x2="9" y2="36.125" gradientUnits="userSpaceOnUse"><stop stop-color="#FF99B8"/><stop offset="1" stop-color="#F34278"/></linearGradient></defs></svg>
                                     <span>Export</span>
                                 </button>
-                                <button type="button" class="pink-btn font-14 px-3 py-spacing-3_5 rounded-12 ms-3">
+                                <button type="button" class="pink-btn font-14 px-3 py-spacing-3_5 rounded-12 ms-3" data-bs-target="#newplaceToggle" data-bs-toggle="modal">
                                     <svg class="me-spacing-1_5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><g clip-path="url(#a)"><path d="M12 8.666H8.668V12c0 .366-.3.666-.666.666A.669.669 0 0 1 7.334 12V8.666H4.001A.669.669 0 0 1 3.334 8c0-.367.3-.667.667-.667h3.333V4c0-.367.3-.667.667-.667.366 0 .666.3.666.667v3.333h3.334c.366 0 .666.3.666.667 0 .366-.3.666-.666.666Z" fill="#FFF"/></g><defs><clipPath id="a"><path fill="#FFF" d="M0 0h16v16H0z"/></clipPath></defs></svg>
                                     Add New Place
                                 </button>

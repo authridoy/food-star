@@ -154,6 +154,12 @@ h5{
 .pt-spacing-3{
     padding-top: var(--spacing-3) !important;
 }
+.ps-spacing-3{
+    padding-left: var(--spacing-3) !important;
+}
+.pe-spacing-4{
+    padding-right: var(--spacing-4) !important;
+}
 .py-spacing-3{
     padding-top: var(--spacing-3) !important;
     padding-bottom: var(--spacing-3) !important;
@@ -183,6 +189,9 @@ h5{
 }
 .pt-spacing-4_5{
     padding-top: var(--spacing-4_5) !important;
+}
+.pb-spacing-4_5{
+    padding-bottom: var(--spacing-4_5) !important;
 }
 .px-spacing-4_5{
     padding-left: var(--spacing-4_5) !important;
@@ -272,6 +281,12 @@ h5{
 
 /* raidus */
 
+.rounded-26{
+    border-radius: 26px !important;
+}
+.rounded-24{
+    border-radius: 24px !important;
+}
 .rounded-20{
     border-radius: 20px !important;
 }
@@ -485,6 +500,19 @@ a{
 .sidebar-nav ul li a:hover svg path{
     fill: var(--bs-secondary-pink);
 }
+
+/* active */
+.active{
+    color: var(--bs-secondary-pink) !important;
+}
+.active svg path{
+    fill: var(--bs-secondary-pink) !important;
+}
+.sidebar-nav ul li a.active::before{
+    background: linear-gradient(101deg, #FF9BBA 0%, #F34278 100%);
+}
+
+
 
 .sidebar-nav ul li a:active{
     color: var(--bs-secondary-pink);
